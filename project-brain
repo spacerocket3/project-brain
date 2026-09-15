@@ -1,0 +1,12 @@
+#!/bin/sh
+set -eu
+
+script_dir=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+python="$script_dir/.venv/bin/python"
+
+if [ ! -x "$python" ]; then
+  echo "Project Brain environment not found. Run: python3 -m venv .venv && .venv/bin/pip install -r requirements.txt" >&2
+  exit 1
+fi
+
+exec "$python" "$script_dir/project_brain.py" "$@"

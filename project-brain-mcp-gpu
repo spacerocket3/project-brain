@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+
+export PROJECT_BRAIN_CODE_EMBED_URL="${PROJECT_BRAIN_CODE_EMBED_URL:-http://127.0.0.1:8002/v1/embeddings}"
+export PROJECT_BRAIN_CODE_EMBED_MODEL="${PROJECT_BRAIN_CODE_EMBED_MODEL:-qwen3-embedding-8b}"
+
+exec "$SCRIPT_DIR/.venv/bin/python" "$SCRIPT_DIR/mcp_server.py"

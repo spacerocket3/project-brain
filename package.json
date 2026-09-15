@@ -1,0 +1,16 @@
+{
+  "name": "project-brain-structural-extractor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "TypeScript compiler support for the Project Brain repository cartographer",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --check ts_structure.mjs"
+  },
+  "dependencies": {
+    "typescript": "5.9.2"
+  }
+}

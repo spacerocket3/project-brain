@@ -1,0 +1,12 @@
+data/
+.venv/
+.venv
+__pycache__/
+*.pyc
+node_modules/
+.coverage
+.pytest_cache/
+.ruff_cache/
+.DS_Store
+*.log
+benchmark-results/
