@@ -1048,7 +1048,7 @@ def handle(message: dict) -> None:
             {
                 "protocolVersion": protocol,
                 "capabilities": {"tools": {"listChanged": False}},
-                "serverInfo": {"name": "project-brain", "version": "1.0.0"},
+                "serverInfo": {"name": "project-brain", "version": "0.1.0"},
                 "instructions": SERVER_INSTRUCTIONS,
             },
         )

@@ -55,14 +55,14 @@ def main() -> None:
         "warning": "Transport diagnostic only; it does not measure answer correctness.",
         "project": args.project,
         "question": args.question,
-        "semantic_mode": dossier["semantic_mode"],
+        "semantic_mode": dossier["retrieval"]["semantic_mode"],
         "eligible_files": file_count,
         "unreadable_files_skipped": skipped,
         "all_source_estimated_tokens": full_tokens,
         "dossier_estimated_tokens": dossier_tokens,
         "estimated_transport_reduction": round(reduction, 4),
-        "included_source_items": dossier["budget"]["included_source_items"],
-        "omitted_source_items": dossier["budget"]["omitted_source_items"],
+        "included_source_items": dossier["budget"]["source_items_included"],
+        "omitted_source_items": dossier["budget"]["source_items_omitted"],
         "estimate_method": dossier["budget"]["estimate_method"],
     }, indent=2))
 
